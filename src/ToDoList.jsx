@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import './index.css';
+import './App.css';
 
 function ToDoList() {
 
@@ -59,13 +61,13 @@ function ToDoList() {
                         <button
                             className="move-button"
                             onClick={() => moveTaskUp(index)}>
-                            ☝️
+                            ↑
 
                         </button>
                         <button
                             className="move-button"
                             onClick={() => moveTaskDown(index)}>
-                            👇
+                            ↓
 
                         </button>
 
