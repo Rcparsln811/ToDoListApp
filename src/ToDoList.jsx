@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './index.css';
 import './App.css';
-import { motion } from "framer-motion"
+import { motion, Reorder } from "framer-motion"
 
 function ToDoList() {
 
@@ -48,10 +48,6 @@ function ToDoList() {
         }
 
     }
-
-
-
-
     return (
         <div className="to-do-list" >
 
@@ -70,34 +66,28 @@ function ToDoList() {
                 </button>
             </div>
 
-            <ol>
-                {tasks.map((task, index) =>
-                    <li key={index} >
-                        <span className="text" >{task}</span>
+            <Reorder.Group values={tasks} onReorder={setTasks} as="ol">
+                {tasks.map((task, index) => (
+                    <Reorder.Item key={task} value={task} whileDrag={{ scale: 1.05 }}>
+                        <span className="text">{task}</span>
                         <button
                             className="delete-button"
                             onClick={() => deleteTask(index)}>
                             Sil
-
                         </button>
                         <button
                             className="move-button"
                             onClick={() => moveTaskUp(index)}>
                             ↑
-
                         </button>
                         <button
                             className="move-button"
                             onClick={() => moveTaskDown(index)}>
                             ↓
-
                         </button>
-
-
-                    </li>
-
-                )}
-            </ol>
+                    </Reorder.Item>
+                ))}
+            </Reorder.Group>
 
 
         </div>
