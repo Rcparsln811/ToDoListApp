@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './index.css';
 import './App.css';
+import { motion } from "framer-motion"
 
 function ToDoList() {
 
@@ -55,6 +56,7 @@ function ToDoList() {
         <div className="to-do-list" >
 
             <h1>To-Do-List</h1>
+
             <div>
                 <input
                     type="text"
