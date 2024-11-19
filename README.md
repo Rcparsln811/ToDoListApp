@@ -29,4 +29,18 @@ Bu proje, React ve Framer Motion kullanılarak geliştirilmiş bir yapılacaklar
 
 ---
 
+![1](https://github.com/user-attachments/assets/66d785cd-7944-4076-93fe-4aeaa06f21ae)
+
+---
+
+![2](https://github.com/user-attachments/assets/d672ffbd-1a2f-4e14-8261-0c6340e44ea2)
+
+---
+
+![4](https://github.com/user-attachments/assets/46916a21-68ff-49e0-b869-cb4693e3406d)
+
+---
+
+
+
 
