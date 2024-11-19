@@ -112,3 +112,18 @@ li{
     border-radius: 10px;
     cursor: pointer;
 }
+
+.delete-selected-button{
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    margin-left: 10px;
+    background-color: hsl(10, 70%, 54%);
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}

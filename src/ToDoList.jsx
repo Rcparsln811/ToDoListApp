@@ -32,6 +32,13 @@ function ToDoList() {
         setSelectedTasks(updatedSelectedTasks);
     }
 
+    function deleteSelectedTasks() {
+        const updatedTasks = tasks.filter((_, index) => !selectedTasks.includes(index));
+        setTasks(updatedTasks);
+        setSelectedTasks([]);
+    }
+
+
     function moveTaskUp(index) {
         if (index > 0) {
             const updatedTasks = [...tasks];
@@ -67,6 +74,14 @@ function ToDoList() {
             addTask();
         }
     };
+
+    const handleKeyUpdate = (event) => {
+        if (event.key === 'Enter') {
+            handleTaskUpdate();
+        }
+    };
+
+
 
     function toggleTaskSelection(index) {
         if (selectedTasks.includes(index)) {
@@ -117,6 +132,13 @@ function ToDoList() {
                     onClick={addTask}>
                     Ekle
                 </button>
+                <button
+                    className="delete-selected-button"
+                    onClick={deleteSelectedTasks}
+                    disabled={selectedTasks.length === 0} // Eğer seçili görev yoksa buton pasif olur
+                >
+                    {selectedTasks.length > 0 ? `Sil ${selectedTasks.length}` : "Sil"}
+                </button>
             </div>
 
             <Reorder.Group values={tasks} onReorder={handleReorder} as="ol">
@@ -132,6 +154,7 @@ function ToDoList() {
                                     type="text"
                                     value={editingTaskText}
                                     onChange={(e) => setEditingTaskText(e.target.value)}
+                                    onKeyDown={handleKeyUpdate}
                                 />
                                 <button className='update-task' onClick={handleTaskUpdate}>Kaydet</button>
                             </div>
