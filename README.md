@@ -29,8 +29,4 @@ Bu proje, React ve Framer Motion kullanılarak geliştirilmiş bir yapılacaklar
 
 ---
 
-## **Kurulum ve Çalıştırma**
 
-1. **Depoyu klonlayın**:
-   ```bash
-   git clone <REPO_URL>
